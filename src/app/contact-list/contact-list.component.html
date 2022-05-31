@@ -1,0 +1,38 @@
+<br>
+<h2 class="font-weight-bold emphasizedLabel"> Contact Directory</h2>
+
+<!-- Added search functionality for List collection w/Pipe Filter utilizing Ng2-Search-Filter -->
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Quick Search ..." [(ngModel)]="term">
+</div>
+
+<table class = "table table-boarded " >
+    <thead class = "font-weight-bold emphasizedLabel">
+        <tr>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Email Id </th>
+            <th> Address </th>
+            <th> Phone Number </th>
+            <th> Birth Date </th> &nbsp; &nbsp; &nbsp; 
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let contact of contacts | filter:term" >
+            <td> {{ contact.firstName }} </td>
+            <td> {{ contact.lastName }} </td>
+            <td> {{ contact.emailId }} </td>
+            <td> {{ contact.address }} </td>
+            <td> {{ contact.phoneNumber }} </td>
+            <td> {{ contact.dateOfBirth }} </td>
+            &nbsp;
+            <td>
+                <button (click) = "updateContact(contact.id)" class = "btn btn-outline-success"> Update</button>&nbsp;
+                <button (click) = "deleteContact(contact.id)" class = "btn btn-outline-danger" style="margin-left: 10px"> Delete</button>&nbsp;
+                <button (click) = "contactDetails(contact.id)" class = "btn btn-outline-success" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

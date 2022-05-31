@@ -1,0 +1,8 @@
+{
+	"REQUIRED-NAME": "Name is required",
+	"REQUIRED-DOB": "Date of birth is required",
+	"REQUIRED-PHONE": "Phone is required",
+	"REQUIRED-EMAIL": "Email is required",
+	"PHONE-INVALID": "Incorrect phone format.",
+	"EMAIL-INVALID": "Incorrect email format."
+}
