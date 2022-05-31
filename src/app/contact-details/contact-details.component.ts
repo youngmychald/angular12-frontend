@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Contact } from '../contact';
 import { ActivatedRoute } from '@angular/router';
 import { ContactService } from '../contact.service';
-//import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -24,8 +23,7 @@ export class ContactDetailsComponent implements OnInit {
     this.contact = new Contact();
     this.contactService.getContactById(this.id).subscribe( data => {
       this.contact = data;
-      //this.backToContacts();
-    });
+   });
   }
 
   back(): void {
