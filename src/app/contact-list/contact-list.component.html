@@ -3,7 +3,7 @@
 
 <!-- Added search functionality for List collection w/Pipe Filter utilizing Ng2-Search-Filter -->
 <div class="form-group">
-    <input type="text" class="form-control" placeholder="Quick Search ..." [(ngModel)]="term">
+    <input type="text" class="form-control" placeholder="Search Contact" [(ngModel)]="term">
 </div>
 
 <table class = "table table-boarded " >
@@ -24,8 +24,8 @@
             <td> {{ contact.lastName }} </td>
             <td> {{ contact.emailId }} </td>
             <td> {{ contact.address }} </td>
-            <td> {{ contact.phoneNumber }} </td>
-            <td> {{ contact.dateOfBirth }} </td>
+            <td> ({{ contact.phoneNumber | slice:0:3 }}) {{ contact.phoneNumber | slice:0:3 }}-{{ contact.phoneNumber | slice:0:4 }}</td>  
+            <td> {{ contact.dateOfBirth | date: 'y/MM/dd'}} </td>
             &nbsp;
             <td>
                 <button (click) = "updateContact(contact.id)" class = "btn btn-outline-success"> Update</button>&nbsp;

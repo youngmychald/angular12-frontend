@@ -21,7 +21,7 @@
     </div>
     <div>
         <label> <b> Phone: </b></label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        {{contact.phoneNumber}}
+        ({{ contact.phoneNumber | slice:0:3 }}) {{ contact.phoneNumber | slice:0:3 }}-{{ contact.phoneNumber | slice:0:4 }}
     </div>
     <div>
         <label> <b> Birth Date: </b></label> &nbsp;

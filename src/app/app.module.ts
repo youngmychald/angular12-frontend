@@ -11,6 +11,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { TranslateModule } from '@ngx-translate/core';
 import { PhoneMaskDirective } from './phone-mask.directive';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     TranslateModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

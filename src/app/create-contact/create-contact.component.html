@@ -58,7 +58,7 @@
         <div class="form-group">
             <label> Phone</label>
             <input type="text" class="form-control" id="phoneNumber" required
-                [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" placeholder="(___) ___-____" autofocus>
+                [(ngModel)]="contact.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" placeholder="(xxx) xxx-xxxx" mask="(000) 000-0000">
             <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
                 class="alert alert-danger">
                 <div *ngIf="phoneNumber.hasError('required') && phoneNumber.touched">
@@ -79,10 +79,7 @@
             </div>    
         </div> <br>
 
-        <br>
-        <br>
-    
-        <button class = "btn btn-outline-success" type ="submit">Submit</button> &nbsp; &nbsp;
+        <button class = "btn btn-outline-success" type ="submit">Create</button> &nbsp; &nbsp;
         <button class = "btn btn-outline-secondary" type ="cancel">Cancel</button> 
     
     </form>
