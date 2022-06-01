@@ -27,14 +27,7 @@
             <input type="text" class ="form-control" id = "address"
                 [(ngModel)] = "contact.address" name = "address">
         </div> <br>
-        <!--
-        <div class="form-group">
-            <label> Phone Number </label>
-            <input type="text" class ="form-control" id = "phoneNumber"
-                [(ngModel)] = "contact.phoneNumber" name = "phoneNumber">
-        </div> <br>
-        -->
-
+        
         <div class="form-group">
             <label> Phone</label>
             <input type="text" class="form-control" id="phoneNumber" required
@@ -50,7 +43,7 @@
         <div class="form-group">
             <label> Birth Date </label>
             <input type="text" class ="form-control" id = "dateOfBirth"
-                [(ngModel)] = "contact.dateOfBirth" name = "dateOfBirth" placeholder="yyyy-mm-dd">
+                [(ngModel)] = "contact.dateOfBirth" name = "dateOfBirth" placeholder="yyyy-mm-dd" mask="0000-00-00">
         </div>
     
         <br>
